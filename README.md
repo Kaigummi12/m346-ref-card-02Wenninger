@@ -1,48 +1,39 @@
 
-# Architecture Ref.Card 02 - React Application (serverless)
+##Dokumentation fpr die Aufgabe m346-ref-card-02 von Kai Wenninger
 
-Link zur Übersicht<br/>
-https://gitlab.com/bbwrl/m346-ref-card-overview
+Als erstes habe ich das GitLab Repository https://gitlab.com/bbwrl/m346-ref-card-02 heruntergeladen und auf GitHub gepusht.
 
-## Installation der benötigten Werkzeuge
+![image](https://github.com/user-attachments/assets/822390af-40ff-463e-93bf-853a9b15d788)
 
-Für das Bauen der App wird Node bzw. npm benötigt. Die Tools sind unter 
-der folgenden URL zu finden. Für die meisten Benutzer:innen empfiehlt sich 
-die LTS Version.<br/>
-https://nodejs.org/en/download/
+Anschliessend habe ich Internet nach einer möglichen Lösung gesucht und folgendes auf der Seite Medium gefunden. https://medium.com/@ravipatel.it/automating-docker-image-creation-and-push-to-docker-hub-for-a-react-app-using-github-actions-7fa092751fc0 Dieser Anleitung bin ich gefolgt und ich versuchte auch immer zu verstehen was in dieser Anleitung gemacht wird. Ebenfalls habe ich viele neue Dinge gelernt.
 
-Node Version Manager<br/>
-Für erfahren Benutzer:innen empfiehlt sich die Installation des 
-Node Version Manager nvm. Dieses Tool erlaubt das Installiert und das 
-Wechseln der Node Version über die Kommandozeile.<br/>
-**Achtung: Node darf noch nicht auf dem Computer installiert sein.**<br/>
-https://learn2torials.com/a/how-to-install-nvm
+##Umsetzung
 
+Als erster Schritt habe ich im Projekt ein Dockerfile hinzugefügt. Dieses braucht man immer wenn man mit Docker arbeitet.
 
-## Inbetriebnahme auf eigenem Computer
+![image](https://github.com/user-attachments/assets/45b6a352-9648-43e2-8643-a6eac3461293)
 
-Projekt herunterladen<br/>
-```git clone git@gitlab.com:bbwrl/m346-ref-card-02.git```
-<br/>
-```cd architecture-refcard-02```
+Das Dockerfile baut eine React-Anwendung mit Node.js, erstellt den Produktions-Build und serviert diesen dann mit einem Nginx-Webserver. So wird die Anwendung in einem leichten Webserver bereitgestellt, um sie live zu betreiben.
 
-### Projekt bauen und starten
-Die Ausführung der Befehle erfolgt im Projektordner
+Kurze Zeit später habe ich dann noch ein docker-publish.yml file erstellt mit folgendem Inhalt.
 
-Builden mit Node/npm<br/>
-```$ npm install```
+![image](https://github.com/user-attachments/assets/c5dafe04-37e0-462a-9e59-a01051559e47)
 
-Das Projekt wird gebaut und die entsprechenden Dateien unter dem Ordner node_modules gespeichert.
+Der Code baut ein Docker-Image, wenn Änderungen auf den main-Branch gepusht werden, und lädt es anschliessend in DockerHub hoch. Dabei wird der Benutzername und das Passwort aus den GitHub-Secrets verwendet.
 
-Die App kann nun mit folgendem Befehl gestartet werden<br/>
-```$ npm start```
+##Hinzufügen von Logindaten (GitHub Secrets) auf GitHub (Actions)
 
-Die App kann nun im Browser unter der URL http://localhost:3000 betrachtet werden.
+Ich habe die beiden Files (Dockerfile, docker-publish.yml) ebenfalls in das Repository auf GitHub gepusht und nun weitere Einstellungen auf GitHub selber vorgenommen. Als nächstes müssen wir die Actions in GitHub hinzufügen. Dazu gehen wir auf das Repository -> Einstellungen -> Secrets variables -> Actions
 
+![image](https://github.com/user-attachments/assets/bfeebb71-3b79-4015-8391-21bdb177a924)
 
+Hier kann man dann ein neues "Repository Secret" erstellen.
+Anschliessend gitb man seine Logindaten für Docker ein. Einma DOCKER_USERNAME und DOCKER_PASSWORD. Wenn man diese beiden hinzugefügt hat sieht es dann so aus.
 
-### Inbetriebnahme mit Docker Container
-folgt...
+![image](https://github.com/user-attachments/assets/3e4b2b53-942b-4855-81ec-842d812844bd)
+
+Nachdem ich diese Schritte erfolgreich ausgeführt/hinzugefügt habe, konnte ich auf GitHub bereits beobachten, dass der Build schon am laufen ist. Bei mir ist er erfolgreich durchgelaufen, was man am Häcklein links sehen kann.
+
 
 
 
