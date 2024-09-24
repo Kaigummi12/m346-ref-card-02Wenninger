@@ -5,7 +5,7 @@ Als erstes habe ich das GitLab Repository https://gitlab.com/bbwrl/m346-ref-card
 
 ![image](https://github.com/user-attachments/assets/822390af-40ff-463e-93bf-853a9b15d788)
 
-Anschliessend habe ich Internet nach einer möglichen Lösung gesucht und folgendes auf der Seite Medium gefunden. https://medium.com/@ravipatel.it/automating-docker-image-creation-and-push-to-docker-hub-for-a-react-app-using-github-actions-7fa092751fc0 Dieser Anleitung bin ich gefolgt und ich versuchte auch immer zu verstehen was in dieser Anleitung gemacht wird. Ebenfalls habe ich viele neue Dinge gelernt.
+Anschliessend habe ich im Internet nach einer möglichen Lösung gesucht und folgendes auf der Seite Medium gefunden. https://medium.com/@ravipatel.it/automating-docker-image-creation-and-push-to-docker-hub-for-a-react-app-using-github-actions-7fa092751fc0 Dieser Anleitung bin ich gefolgt und ich versuchte auch immer zu verstehen was in dieser Anleitung gemacht wird. Ebenfalls habe ich viele neue Dinge gelernt.
 
 ## Umsetzung
 
@@ -28,7 +28,7 @@ Ich habe die beiden Files (Dockerfile, docker-publish.yml) ebenfalls in das Repo
 ![image](https://github.com/user-attachments/assets/bfeebb71-3b79-4015-8391-21bdb177a924)
 
 Hier kann man dann ein neues "Repository Secret" erstellen.
-Anschliessend gitb man seine Logindaten für Docker ein. Einma DOCKER_USERNAME und DOCKER_PASSWORD. Wenn man diese beiden hinzugefügt hat sieht es dann so aus.
+Anschliessend gitb man seine Logindaten für Docker ein. Einmal DOCKER_USERNAME und DOCKER_PASSWORD. Wenn man diese beiden hinzugefügt hat sieht es dann so aus.
 
 ![image](https://github.com/user-attachments/assets/3e4b2b53-942b-4855-81ec-842d812844bd)
 
