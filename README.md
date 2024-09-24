@@ -36,6 +36,11 @@ Nachdem ich diese Schritte erfolgreich ausgeführt/hinzugefügt habe, konnte ich
 
 ![image](https://github.com/user-attachments/assets/76942004-7d8b-4a37-9f2e-c4b322b48541)
 
+Um zu überprüfen, ob es auch wirklich funktioniert hat, kann man sich auf DockerHub mit seinen Logindaten, die man auf GitHub hinterlegt hat, anmelden und sollte das heraufgeladenen Image sehen.
+
+![image](https://github.com/user-attachments/assets/c5a2e8c3-bfbf-4853-9318-d63a20755cba)
+
+
 # Best Practices für CI/CD mit GitHub Actions
 
 1. **Sichere Secrets-Verwaltung**: Verwende GitHub Secrets für Passwörter und API-Keys.
