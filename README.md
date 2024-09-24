@@ -38,7 +38,7 @@ Nachdem ich diese Schritte erfolgreich ausgeführt/hinzugefügt habe, konnte ich
 
 Um zu überprüfen, ob es auch wirklich funktioniert hat, kann man sich auf DockerHub mit seinen Logindaten, die man auf GitHub hinterlegt hat, anmelden und sollte das heraufgeladenen Image sehen.
 
-![image](https://github.com/user-attachments/assets/c5a2e8c3-bfbf-4853-9318-d63a20755cba)
+![image](https://github.com/user-attachments/assets/46f2d648-5900-49de-b9b1-5e3e330f12f3)
 
 
 # Best Practices für CI/CD mit GitHub Actions
